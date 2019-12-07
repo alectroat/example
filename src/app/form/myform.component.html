@@ -1,0 +1,13 @@
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+  <input placeholder="TITLE" formControlName="Title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Title.errors }">
+  <div *ngIf="submitted && f.Title.errors" class="invalid-feedback">
+    <div *ngIf="f.Title.errors.required">Full Name is required</div>
+  </div>
+  <button>
+    Save
+  </button>
+</form>
+
+<ul>
+  <li *ngFor="let d of data">{{d.title}}</li>
+</ul>

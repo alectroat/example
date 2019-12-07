@@ -1,0 +1,6 @@
+<div style="margin-top:20px"></div>
+<b>{{message|myPipe:10:20}}</b>
+<div *ngFor="let control of controls">
+  <child-app (childEvent)="message=$event" [childName]="control"></child-app>
+</div>
+
